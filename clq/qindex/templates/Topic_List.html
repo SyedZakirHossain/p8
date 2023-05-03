@@ -1,0 +1,110 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+ <!-- JavaScript Bundle with Popper -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>   
+<style>
+    table, th, td {
+      border: 1px solid black;
+    }
+    table.center {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    h1{
+        text-align: center;
+        color:blue;
+                  }
+    h2{
+      text-align: center;
+      color:red;
+                }             
+    h3{
+      text-align: center;
+      margin-left:0px;
+      color:black;
+                }
+    a{
+      text-align: center;
+      color:red;
+                }  
+    x{
+      margin-left: 20px;
+      color:red;
+                }                        
+    </style>
+    <title>Al Quran Topic List </title>
+</head>
+<body>
+       <!--------------------Start navbar------------------------>
+       <nav class="navbar sticky-top navbar-light-bg-light" style="background-color: #FFA07A;">
+       <!--nav class="navbar navbar-expand-lg" style="background-color: #FFA07A;">
+        <nav class="navbar navbar-expand-lg bg-dark"-->
+          <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'qindex:ehome' %}">Back</a>
+           
+           
+          
+          </div>
+            
+          </div>
+        </nav>
+        <!--------------------End navbar------------------------>   
+ 
+    {% block content %}
+   
+         {% endblock %}
+            </div>
+            
+       
+        </div>
+        <form action="" method="">
+            
+            {% csrf_token %}
+    <div class="container">
+     
+        <h1 align="center">Al Quran : Topic List</h1><br>
+           
+        <h1></h1>
+            <div class="d-flex justify-content-center mt-3 login_container">
+                <a  class="btn btn-primary w-25  btn" href="{% url 'qindex:tl1' %}">Abraham </a>
+            </div>  
+            
+            <div class="d-flex justify-content-center mt-3 login_container">
+               
+                <a  class="btn btn-primary w-25 btn" href="{% url 'qindex:tl3' %}">Ahad </a>
+             </div>
+             <div class="d-flex justify-content-center mt-3 login_container">
+               
+              <a  class="btn btn-primary w-25 btn" href="{% url 'qindex:tl2' %}">Lahab </a>
+           </div>
+           <div class="d-flex justify-content-center mt-3 login_container">
+            <a  class="btn btn-primary w-25 btn" href="{% url 'qindex:tl4' %}">Indecencies </a>
+        </div>  
+          <div class="d-flex justify-content-center mt-3 login_container">
+           <a  class="btn btn-primary w-25 btn" href="{% url 'qindex:tl5' %}">Do and don't</a>
+         </div>
+         <div class="d-flex justify-content-center mt-3 login_container">
+          <a  class="btn btn-primary w-25 btn" href="{% url 'qindex:tl6' %}">Not Equal</a>
+        </div>
+        <div class="d-flex justify-content-center mt-3 login_container">
+          <a  class="btn btn-primary w-25 btn" href="{% url 'qindex:tl7' %}">Oli and Murshid</a>
+        </div>
+
+
+
+      
+
+        </div>
+    </form>    
+           
+</body>
+</html>

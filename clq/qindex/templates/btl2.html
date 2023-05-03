@@ -1,0 +1,148 @@
+{%extends 'base.html'%}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al Quran Topic Wise Data </title>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+        }
+        table.center {
+          margin-left: auto;
+          margin-right: auto;
+        }
+        h1{
+            text-align: center;
+            color:blue;
+                      }
+        h2{
+          text-align: center;
+          color:red;
+                    }             
+        h3{
+          text-align: center;
+          margin-left:0px;
+          color:black;
+                    }
+        a{
+          text-align: center;
+          color:red;
+                    }  
+        x{
+          margin-left: 20px;
+          color:red;
+                    }                        
+        </style>
+</head>
+<body>
+    <!--------------------Start navbar------------------------>
+    <nav class="navbar navbar-expand-lg" style="background-color: #FFA07A;">
+        <!--nav class="navbar navbar-expand-lg bg-dark"-->
+          <div class="container-fluid">
+            <a class="navbar-brand"href="" ></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+           
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            
+            </button>
+            
+            <a class="navbar-brand" href=""> </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="navbar-brand">
+                  <a class="nav-link active" href="">Back</a>
+                </li>
+                
+                <li class="navbar-brand">
+                  a class="nav-link active"<a href="">Contact Us</a>
+                </li>
+               
+              </ul>
+              </div>
+          </div>
+        </nav>
+        <!--------------------End navbar------------------------>
+          
+    {% block content %}
+    <div id="name" style="word-spacing: 30px;">
+        
+        <h2><a href="{% url 'qindex:home' %}">Home</a></h2><br>
+        <h1>Topic Name : {{ tname }}</h1>
+       </div>
+    
+    <form action="add" method=" GET"align="center">
+            <div className="Report">
+                {% csrf_token %}
+                <h2> </h2><br>
+                
+            <table border="1">
+                    <tr>
+                        <td>Topic_No</td>
+                        <td>Topic Name</td>
+                        
+                        <td>Sura No</td>
+                        <td>Sura Name</td>
+                        <td>Verse No</td>
+                        <td>Verses</td>
+                        
+                    </tr>
+                {% for top in top %}
+                    <tr>
+                        <td>{{top.topicno}}</td>
+                        <td>{{top.tname}}</td>
+                        
+                        <td>{{top.surano}}</td>
+                        <td>{{top.suraname}}</td>
+                        <td>{{top.verseno}}</td>
+                        <td>{{top.verse}}</td>
+                       
+                    </tr>
+    
+                {% endfor %}
+            </table>
+            </form>
+     
+            </div>
+         
+                  <div>
+                                 
+                <a href="{% url 'qindex:home' %}">Home</a>
+                       
+                </div>
+                <br> <td></td>
+                <td></td>          
+              </div><br><br>     
+    <!--------------------Footer Start------------------------>
+    <footer class="bg-success text-white position-relative">
+      <p class="text-center">© Copyright 2022-2032 www.Soft Ray.io. All rights reserved. Developed by Soft Ray.</p>
+    </footer>
+    <!--------------------Footer End------------------------>
+    <br>
+    {% endblock %}
+    </body>
+    </html>
+                 
+                        
+                          
+                           
+                           
+                                     
+                           
+                  
+                        
+                  
+                  
+                  
+                  
+                   
+                  

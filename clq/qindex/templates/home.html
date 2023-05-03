@@ -1,0 +1,129 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <!-- JavaScript Bundle with Popper -->
+       
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>   
+       <style>
+           table, th, td {
+             border: 1px solid black;
+           }
+           table.center {
+             margin-left: auto;
+             margin-right: auto;
+           }
+           h1{
+               text-align: center;
+               color:blue;
+                         }
+           h2{
+             text-align: center;
+             color:black;
+                       }             
+           h3{
+             text-align: center;
+             margin-left:0px;
+             color:black;
+                       }
+          h4{
+          text-align: center;
+          color:red;
+                    }                   
+           a{
+             text-align: center;
+             color:red;
+                       }  
+           x{
+             margin-left: 20px;
+             color:red;
+                       }                        
+           </style>
+        <title>Home</title>   
+    </head>
+    <body>
+       <!--------------------Start navbar------------------------>
+    
+
+        <nav class="navbar navbar-expand-lg" style="background-color: #FFA07A;font-color: #fff;">
+          <!--nav class="navbar navbar-expand-lg bg-dark"-->
+            <div class="container-fluid">
+              <a class="navbar-brand"href="{% url 'qindex:bhome' %} ">Bangla</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                      
+              
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  
+                  
+                    <li class="navbar-brand">
+                      <a class="navbar-brand" href="{% url 'qindex:ehome' %}">English</a>
+                    </li>
+                   
+                </ul>
+                </div>
+            </div>
+          </nav>
+        <!--------------------End navbar------------------------>   
+
+        <div id="name" style="word-spacing: 10px;">
+            <h4>চোখের চুরি এবং অন্তরের গোপন বিষয় তিনি জানেন। [সুরা মু’মিন - ৪০:১৯]</h4>
+            <h4> 40:19. He knows the deceptions of the eyes, and what the hearts conceal. </h4>
+            
+           
+        
+        </div>   <br> <br>
+        <section>
+            <div>
+                <img>
+            </div>
+            <div id="q"align="center">
+                  <h2> আল কোরআন উল কারিম এর বিষয় ভিত্তিক আয়াত সূচী ।      </h2>  <br>  
+                  <h2>  আপনার পছন্দের ভাষা নির্বাচন করুন । বাংলা  বা  ইংরেজি  </h2> 
+        <br>  <br>  
+               <h2>Topic wise index of The Holy Quran</h2> <br> 
+            <h2> Please select the language of your choice. English  or  Bengali </h2> 
+            
+            </div>
+            
+            <div id=""align="center">
+                 
+            </div>
+                 <div id=""align="center">
+                    <h1></h1>
+                    <h1> </h1>
+                 </div>
+            
+        </section>
+        <br>  <br>   <br>  <br>   
+ <!--------------------Footer Start------------------------>
+
+  <nav class="navbar navbar-expand-lg" style="background-color: #FFA07A;">
+    <!--nav class="navbar navbar-expand-lg bg-dark"-->
+  
+      <div class="container-fluid">
+  <h5 class="text-center"> Developed by Soft Ray.</h5>
+</div>
+<div class="container-fluid">
+  <h5 class="text-center">  <a class="nav-link active" href="{% url 'qindex:about' %}">About</a></h5>
+</div>
+<div class="container-fluid">
+  <h5 class="text-center"> <a class="nav-link active" href="{% url 'qindex:contact' %}">Contact Us</a></h5>
+    </div>
+</nav>
+<!--------------------Footer End------------------------>      
+    
+    </body>
+</html>
+
+
+
+

@@ -1,0 +1,103 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al Quran Topic Wise Data </title>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+        }
+        table.center {
+          margin-left: auto;
+          margin-right: auto;
+        }
+        h1{
+            text-align: center;
+            color:blue;
+                      }
+        h2{
+          text-align: center;
+          color:red;
+                    }             
+        h3{
+          text-align: center;
+          margin-left:0px;
+          color:black;
+                    }
+        a{
+          text-align: center;
+          color:red;
+                    }  
+        x{
+          margin-left: 20px;
+          color:red;
+                    }                        
+        </style>
+</head>
+<body>
+    
+  
+
+      <h2><a href="{% url 'qindex:tl' %}">Back</a></h2><br>
+      <h1>Topic Name : {{ tname }}</h1>
+        <form action="add" method=" GET"align="center">
+            <div className="Report">
+                {% csrf_token %}
+                <h2> </h2><br>
+                <table class="center" border="2" cellpadding="10">   
+                <tr>
+                      <td>Topic Name</td>
+                      <td>Sura No</td>
+                        <td>Sura Name</td>
+                        <td>Verse No</td>
+                        <td>Verses</td>
+                       
+                    </tr>
+                {% for top in top %}
+                    <tr>
+                        <td>{{top.tname}}</td>
+                        <td>{{top.surano}}</td>
+                        <td>{{top.suraname}}</td>
+                        <td>{{top.verseno}}</td>
+                        <td>{{top.verse}}</td>
+                      
+                    </tr>
+    
+                {% endfor %}
+            </table>
+            </form>
+                 </div>
+              
+                <br> <td></td>
+                <td></td>   
+                   
+              </div><br><br>     
+   
+<!--------------------Footer Start------------------------>
+<footer class="bg-success text-white position-relative">
+	<p class="text-center">This part of this service provided by Soft Ray.</p>
+  </footer>
+  <!--------------------Footer End------------------------>
+    <br>
+ 
+    </body>
+    </html>
+                 
+                        
+                          
+                           
+                           
+                                     
+                           
+                  
+                        
+                  
+                  
+                  
+                  
+                   
+                  

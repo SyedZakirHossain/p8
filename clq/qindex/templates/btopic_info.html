@@ -1,0 +1,62 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al Quran Topic Wise Data </title>
+</head>
+<body>
+    {% block content %}
+    <div id="name" style="word-spacing: 30px;">
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'tl' %}">Topic_list</a>
+       
+       </div>
+   
+    <form action="add" method=" GET"align="center">
+            <div className="Report">
+                {% csrf_token %}
+                <h2>Topic Wise Verses List </h2><br>
+                
+            <table border="1">
+                    <tr>
+                        <td>Topic_No</td>
+                        <td>Topic Name</td>
+                        <td>Topic Ref </td>
+                        <td>Sura No</td>
+                        <td>Sura Name</td>
+                        <td>Verse No</td>
+                        <td>Verses</td>
+                        
+                    </tr>
+                {% for top in top %}
+                    <tr>
+                        <td>{{top.topicno}}</td>
+                        <td>{{top.tname}}</td>
+                        <td>{{top.tref}}</td>
+                        <td>{{top.surano}}</td>
+                        <td>{{top.suraname}}</td>
+                        <td>{{top.versesno}}</td>
+                        <td>{{top.verse}}</td>
+                    </tr>
+    
+                {% endfor %}
+            </table>
+            </form>
+        
+            </div>
+            <br><br>
+            <br><br>
+    
+                  <div>
+                   
+                  
+                <a href="{% url 'home' %}">Home</a>
+                {% endblock %}          
+                          
+                  </div>
+</body>
+</html>

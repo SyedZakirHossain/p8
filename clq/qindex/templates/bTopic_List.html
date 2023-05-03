@@ -1,0 +1,108 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+ <!-- JavaScript Bundle with Popper -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>   
+<style>
+    table, th, td {
+      border: 1px solid black;
+    }
+    table.center {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    h1{
+        text-align: center;
+        color:blue;
+                  }
+    h2{
+      text-align: center;
+      color:red;
+                }             
+    h3{
+      text-align: center;
+      margin-left:0px;
+      color:black;
+                }
+    a{
+      text-align: center;
+      color:red;
+                }  
+    x{
+      margin-left: 20px;
+      color:red;
+                }                        
+    </style>
+    <title>Al Quran Topic List </title>
+</head>
+<body>
+       <!--------------------Start navbar------------------------>
+      
+        <nav class="navbar sticky-top navbar-light-bg-light" style="background-color: #FFA07A;">
+          <!--nav class="navbar navbar-expand-lg bg-dark">
+          <nav class="navbar navbar-expand-lg" style="background-color: #FFA07A;"-->
+        <!--nav class="navbar navbar-expand-lg bg-dark"-->
+          <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'qindex:bhome' %}">Back</a>
+           
+            
+        
+            
+       
+          </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="navbar-brand">
+                  <a class="nav-link active" href=""></a>
+                </li>
+                
+                <li class="navbar-brand">
+                  <a class="nav-link active" href=" "></a>
+                </li>
+                <li class="navbar-brand">
+                    <a class="nav-link active" href=""></a>
+                  </li>
+              </ul>
+              </div>
+          </div>
+        </nav>
+        <!--------------------End navbar------------------------>   
+ 
+    {% block content %}
+   
+         {% endblock %}
+            </div>
+            
+       
+        </div>
+        <form action="" method="">
+            
+            {% csrf_token %}
+    <div class="container">
+      <br><br>
+        <h2 align="center">আল কোরআনঃ বিষয় ভিত্তিক আয়াত সূচি</h2><br> 
+           
+        <h1></h1>
+             
+          <div class="d-flex justify-content-center mt-3 login_container">
+           <a  class="btn btn-primary w-25  btn" href="{% url 'qindex:btl1' %}">অশ্লীলকার্য</a>
+         </div>
+         <div class="d-flex justify-content-center mt-3 login_container">
+          <a  class="btn btn-primary w-25  btn" href="{% url 'qindex:btl2' %}">সবাই সমান নয়</a> 
+        </div>
+        <div class="d-flex justify-content-center mt-3 login_container">
+          <a  class="btn btn-primary w-25  btn" href="{% url 'qindex:btl3' %}">অলি ও মুর্শিদ</a> 
+        </div>
+        </div>
+    </form>     
+           
+</body>
+</html>

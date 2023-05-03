@@ -1,0 +1,178 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+   
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>   
+   <style>
+       table, th, td {
+         border: 1px solid black;
+       }
+       table.center {
+         margin-left: 20px;
+         margin-right: 10px ;
+       }
+       h1{
+           text-align: center;
+           color:blue;
+                     }
+       h2{
+         text-align: center;
+         color:red;
+                   }             
+       h3{
+         text-align: center;
+         margin-left:0px;
+         color:black;
+                   }
+       a{
+         text-align: center;
+         color:red;
+                   }  
+       x{
+         margin-left: 20px;
+         color:red;
+                   }                        
+       </style>
+
+
+    <title>Bangla questions </title>
+</head>
+<body>
+  {% block content %}
+    <!--------------------Start navbar------------------------>
+    <nav class="navbar sticky-top navbar-light-bg-light" style="background-color: #FFA07A;">
+      <!--nav class="navbar navbar-expand-lg" style="background-color: #FFA07A;">
+       <nav class="navbar navbar-expand-lg bg-dark"-->
+ 
+ 
+        <div class="container-fluid">
+          <a class="navbar-brand"href="{% url 'qindex:bhome' %} ">Back</a>
+         
+                  
+          
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="navbar-brand">
+                  <a class="navbar-brand" href="{% url 'qindex:bqr' %}">Quran All</a>
+                </li>
+              
+                <li class="navbar-brand">
+                  <a class="navbar-brand" href="{% url 'qindex:btl' %}">Topic List</a>
+                </li>
+                <li class="navbar-brand">
+                  <a class="navbar-brand" href="{% url 'qindex:vbspl' %}">Request</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+      </nav>
+
+
+
+ 
+
+    <div id="q"align="center"><br>
+   
+      <h3> স্রষ্টা , প্রেরিত পুরুষগণ ও ঐশী গ্রন্থ সমূহ সমস্ত মানব জাতির জন্য । </h3> <br> 
+ 
+ <h3>   বাংলায় (। বা , ) দাড়ি বা কমা  সামান্য এদিক সেদিক  হলে  অর্থ উলটে যায় । যেমন  </h3>  <br> 
+ <h3>  এখানে প্রস্রাব করিবেন , না করিলে ৫০০ টাকা জরিমানা ।    </h3>  <br>
+ 
+ <h3>   অনুবাদ করার সময় অর্থ পালটে দেয়া হয়েছে , জেনে হোক বা না জেনে। </h3>  <br>
+ <h3>  জের , জবর , পেশ লাগানো হয়েছে অনেক পরে । হাজ্জাজ বিন ইউসুফ এর দ্বারা।  </h3> <br>
+ <h3>   কে  ৬৯২ খ্রিষ্টাব্দে  </h3><h3>সাত মাস কাবা অবরোধ করে রেখেছিলেন ? এবং</h3><br>
+<h3> কে  কাবা ঘর কে ভেঙ্গে  মাটিতে  
+  মিশিয়ে দিয়েছিলেন ?</h3> <br>
+  <h3>রেফারেন্সঃ  https://en.wikipedia.org/wiki/Siege_of_Mecca_(692) </h3> <br>
+<h3>রেফারেন্সঃ  বাকি রেফারেন্স আপনি খুজে নেবেন ! তকদিরে থাকলে পাবেন ।</h3>  <br>
+  
+  <h3> কাউকে দোষারোপ করা উদ্দেশ্য নয়।  </h3> <br>
+  <h3>সত্য পাওয়া টা মুখ্য । </h3> <br> 
+  <h3>স্রষ্টার বিধানে তো নোংরামি, অশ্লীলতা , সম্পদ বা ক্ষমতা নিয়ে কামড়া কামড়ি থাকবে না ?  </h3> <br> 
+  <h3>৬৬১  খ্রিষ্টাব্দের আগস্ট মাস এর পর থেকে   </h3> <br>  
+  <h3>আজকে পর্যন্ত যে ক্ষমতাসীনরা  নবির বংশকে জবাই করে,    </h3> <br>
+  <h3>নিজেরা ক্ষমতায় বসে   </h3> <br>
+  <h3> ইসলামের  নামে আমাদের যা শিখিয়েছে, হাজার বছর ধরে  </h3> <br>  
+  <h3>সহজ সরল মুসলমানেরা তার ফাদে পড়ে বিভক্ত হতে   </h3> <br>
+  <h3> হতে , ৭৩ ফেরকায় ভাগ হয়ে গেছে অনেক আগেই্‌,  </h3> <br>
+  <h3> আর মহানবি একথা আগেই বলেছিলেন। </h3> <br>
+  <h3>বেতন দিয়ে পোষা মোল্লা নামধারী কর্মচারী রাজার আদেশে ইচ্ছা মত ফতওয়া দিয়েছে । </h3> <br> 
+  <h3> যারাই সত্যের পক্ষে কথা বলেছে , তাদেরকে হত্যা করা হয়েছে । </h3> <br>
+  <h3> আর বিজয়ী রাজার পক্ষেই ইতিহাস ও ধর্ম ফতওয়া ও হাদিস রচনা করা হয়েছে । </h3> <br> 
+  <h3> ইতিহাস তারই সাক্ষ্য দেয় ।  </h3> <br>
+</div><br>
+        <div id="name" style="word-spacing: 10px;">
+          <h3>পাঠক আপনি নিজেই শব্দ শব্দ মিলিয়ে দেখুন!</h3><br>
+          <h3> শব্দ আছে কি লেখা, আর কি অনুবাদ করা হয়েছে ?  </h3> <br>
+          <h3>কোরানের অনুবাদ করার সময় নতুন শব্দ আমদানির অধিকার<br><br> 
+             অনুবাদককে কে দিয়েছে ?   </h3><br>
+          <h3> ভাই অনুবাদক , কোথায় লেখা আছে যে আপনাকে সব জ্ঞান  জানতেই হবে ?</h3>  <br>
+          
+          <h3>না জানলে আপনি বলবেন যে এটা আমি বুঝতে পারছিনা বা জানিনা ।   </h3> <br>
+          <h3>কোরানের অনুবাদ করার সময় যেটা নাই এমন নতুন শব্দ আমদানি আপনি কি করতে পারেন ?   </h3><br>
+          <h3> নতুন শব্দ আমদানি মানে অনুবাদক অর্থ বিকৃতর চেষ্টা করেছেন । </h3><br>
+          <h3> তা  বুঝে হোক আর না বুঝে হোক  ?   </h3><br>
+          <h3>  প্রিয় পাঠক আপনি অন্য যেকোনো অনুবাদের সাথে শব্দ শব্দ মিলিয়ে দেখুন  ?   </h3><br>
+          <h3>  আমি এখানে কয়েকটা আয়াত তুলে ধরার চেষ্টা করেছি  ?   </h3> <br>
+
+          </div>
+    <div id="name" style="word-spacing: 30px;">
+        
+      
+       </div>
+    
+    <form action="add" method=" GET"align="center">
+            <div className="Report">
+                {% csrf_token %}
+                <h2> </h2><br>
+                
+                <table class="center" border="2" cellpadding="10">
+                    <tr>
+                        
+                        <td>আরবি</td> 
+                        <td>উচ্চারন</td> 
+                        <td> অনুবাদ</td>
+                        <td>প্রশ্ন</td> 
+                        
+                        
+                    </tr>
+                {% for bsp in bsp %}
+                    <tr>
+                       
+                        <td>{{bsp.bav}}</td>
+                        <td>{{bsp.bu}}</td>
+                        <td>{{bsp.bv}}</td>
+                        <td>{{bsp.bq}}</td>
+                        
+                       
+                    </tr>
+    
+                {% endfor %}
+            </table>
+            </form>
+     
+            </div>
+            <br><br>
+            <br><br>
+   
+                  <div>
+                   
+                  
+             
+                          
+                {% endblock %}
+                  </div>
+</body>
+</html>
+
+
+
+
